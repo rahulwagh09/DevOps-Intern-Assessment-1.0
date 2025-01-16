@@ -1,7 +1,7 @@
 # DevOps-Intern-Assessment-1.0
 
 #### DevOps Intern Assessment Documentation: https://docs.peerxp.com/recruitment/ops/devops-intern-assessment
-
+### Install Ghost on Ubuntu Documentation: https://ghost.org/docs/install/ubuntu/#install-ghost-cli
 Server Setup
 This part of the guide will ensure all prerequisites are met for installing the Ghost-CLI.
 
@@ -105,6 +105,10 @@ ghost install
 ==========================================================================
 ## Ghost WebSite:
 ![Screenshot 2025-01-16 152118](https://github.com/user-attachments/assets/bacf9b44-7b52-4695-ae23-ae3b32a2e757)
+![Screenshot 2025-01-16 162204](https://github.com/user-attachments/assets/ba6e90fe-3e77-41ac-9b50-21f5932f98ce)
+![Screenshot 2025-01-16 162308](https://github.com/user-attachments/assets/db656523-407c-498e-a205-bdf315bf3fbd)
+![Screenshot 2025-01-16 162503](https://github.com/user-attachments/assets/028ae8c5-1b11-4340-a71f-df0a20633a36)
+
 ## AWS Ec2:
 ![Screenshot 2025-01-16 152215](https://github.com/user-attachments/assets/52348fdd-8c0c-4fd6-8ed2-d30e1016b5ff)
 ## GitLab Pipeline:
