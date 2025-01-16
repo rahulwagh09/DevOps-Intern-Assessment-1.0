@@ -71,6 +71,7 @@ You will need to have a supported version of Node installed system-wide in the m
 #Create deb repository
 - NODE_MAJOR=18
 #Use a supported version
+
 - echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
 #Run update and install
@@ -81,6 +82,7 @@ You will need to have a supported version of Node installed system-wide in the m
 ### Install Ghost-CLI
 Ghost-CLI is a commandline tool to help you get Ghost installed and configured for use, quickly and easily. The npm module can be installed with npm or yarn.
 - sudo npm install ghost-cli@latest -g
+
 Once installed, you can always run 'ghost help' to see a list of available commands.
 
 ---------------------------------------------
