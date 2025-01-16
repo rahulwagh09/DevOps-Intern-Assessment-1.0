@@ -43,64 +43,67 @@ Next, you’ll need to install MySQL to be used as the production database.
 
 -------------------------------------------
 ### Install MySQL
-sudo apt-get install mysql-server
-On newer versions of Ubuntu, the root user created when you install MySQL will by default be configured to use socket-based authentication, meaning that only the root Unix user will be able to authenticate. Ghost does not support this kind of authentication, so you must change the root MySQL user to have a password. Run these commands to make the root user have a password:
+- sudo apt-get install mysql-server
+On newer versions of Ubuntu, the root user created when you install MySQL will by default be configured to use socket-based authentication,
+ meaning that only the root Unix user will be able to authenticate.
+Ghost does not support this kind of authentication, so you must change the root MySQL user to have a password. Run these commands to make the root user have a password:
 
 #Enter mysql
-sudo mysql
+- sudo mysql
 #Update permissions
-ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY '<your-new-root-password>';
+- ALTER USER 'root'@'localhost' IDENTIFIED WITH 'mysql_native_password' BY '<your-new-root-password>';
 #Reread permissions
-FLUSH PRIVILEGES;
+- FLUSH PRIVILEGES;
 #exit mysql
-exit
+- exit
 
 -------------------------------------------
 ### Install Node.js
 You will need to have a supported version of Node installed system-wide in the manner described below. If you have a different setup, you may encounter problems.
 
 #Download and import the Nodesource GPG key
-sudo apt-get update
-sudo apt-get install -y ca-certificates curl gnupg
-sudo mkdir -p /etc/apt/keyrings
-curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
+- sudo apt-get update
+- sudo apt-get install -y ca-certificates curl gnupg
+- sudo mkdir -p /etc/apt/keyrings
+- curl -fsSL https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key | sudo gpg --dearmor -o /etc/apt/keyrings/nodesource.gpg
 
 #Create deb repository
-NODE_MAJOR=18 # Use a supported version
-echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
+- NODE_MAJOR=18
+#Use a supported version
+- echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_$NODE_MAJOR.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list
 
 #Run update and install
-sudo apt-get update
-sudo apt-get install nodejs -y
+- sudo apt-get update
+- sudo apt-get install nodejs -y
 
 --------------------------------------------
 ### Install Ghost-CLI
 Ghost-CLI is a commandline tool to help you get Ghost installed and configured for use, quickly and easily. The npm module can be installed with npm or yarn.
-
-sudo npm install ghost-cli@latest -g
-Once installed, you can always run ghost help to see a list of available commands.
+- sudo npm install ghost-cli@latest -g
+Once installed, you can always run 'ghost help' to see a list of available commands.
 
 ---------------------------------------------
 ### Install Ghost
-Once your server is correctly setup and ghost-cli is installed, you can install Ghost itself. The following steps are the recommended setup. If you need more fine-grained control, the CLI has flags and options that allow you to break down and customise the install steps.
+Once your server is correctly setup and ghost-cli is installed, you can install Ghost itself. The following steps are the recommended setup.
+If you need more fine-grained control, the CLI has flags and options that allow you to break down and customise the install steps.
 
 Create a directory
 Ghost must be installed in its own directory, with a proper owner and permissions.
 #Create directory: Change `sitename` to whatever you like
-sudo mkdir -p /var/www/sitename
+- sudo mkdir -p /var/www/sitename
 
 #Set directory owner: Replace <user> with the name of your user
-sudo chown <user>:<user> /var/www/sitename
+- sudo chown <user>:<user> /var/www/sitename
 
 #Set the correct permissions
-sudo chmod 775 /var/www/sitename
+- sudo chmod 775 /var/www/sitename
 
 #Then navigate into it
-cd /var/www/sitename
+- cd /var/www/sitename
 Run the install process
 
 #Now we install Ghost with one final command.
-ghost install
+- ghost install
 
 ==========================================================================
 ## Ghost WebSite:
