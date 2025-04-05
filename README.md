@@ -1,6 +1,5 @@
-# DevOps-Intern-Assessment-1.0
+# DevOps-Intern-Assessment
 
-#### DevOps Intern Assessment Documentation: https://docs.peerxp.com/recruitment/ops/devops-intern-assessment
 #### Install Ghost on Ubuntu Documentation: https://ghost.org/docs/install/ubuntu/#install-ghost-cli
 Server Setup
 This part of the guide will ensure all prerequisites are met for installing the Ghost-CLI.
