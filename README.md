@@ -1,4 +1,4 @@
-# DevOps-Intern-Assessment
+## DevOps-Intern-Assessment
 
 #### Install Ghost on Ubuntu Documentation: https://ghost.org/docs/install/ubuntu/#install-ghost-cli
 Server Setup
