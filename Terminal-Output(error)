@@ -1,3 +1,6 @@
+this are logs 
+
+
 ubuntu@ip-172-31-10-100:~$ sudo apt-get update
 Hit:1 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy InRelease
 Get:2 http://ap-south-1.ec2.archive.ubuntu.com/ubuntu jammy-updates InRelease [128 kB]
